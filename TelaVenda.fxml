@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="433.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetointegrador.TelaVendaController">
+   <children>
+      <Label layoutX="14.0" layoutY="17.0" text="Venda de Produtos">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputCPF" layoutX="15.0" layoutY="54.0" prefHeight="25.0" prefWidth="155.0" promptText="CPF" AnchorPane.leftAnchor="15.0" />
+      <Button layoutX="174.0" layoutY="54.0" mnemonicParsing="false" onAction="#selecionarCliente" prefHeight="25.0" prefWidth="114.0" text="Consultar CPF" />
+      <TextField fx:id="inputCodprod" layoutX="15.0" layoutY="87.0" prefHeight="25.0" prefWidth="155.0" promptText="Código do produto" AnchorPane.leftAnchor="15.0" />
+      <TextField fx:id="inputQuantidade" layoutX="174.0" layoutY="86.0" prefHeight="25.0" prefWidth="114.0" promptText="Quantidade" />
+      <Label layoutX="472.3333333333333" layoutY="32.0" text="Nome do Cliente" AnchorPane.rightAnchor="73.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nomeCliente" layoutX="474.0" layoutY="53.0" prefHeight="25.0" prefWidth="149.0" text="........" AnchorPane.rightAnchor="26.66666666666663">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <DatePicker fx:id="dataCompra" layoutX="474.0" layoutY="86.0" prefHeight="25.0" prefWidth="163.0" AnchorPane.rightAnchor="15.0" />
+      <TableView fx:id="TableVendas" layoutX="15.0" layoutY="121.0" prefHeight="206.0" prefWidth="620.0" AnchorPane.bottomAnchor="107.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="121.0">
+         <columns>
+            <TableColumn fx:id="colunaCodigo" prefWidth="75.0" text="Código" />
+            <TableColumn fx:id="colunaNome" prefWidth="81.0" text="Nome" />
+            <TableColumn fx:id="colunaFabricante" prefWidth="91.0" text="Fabricante" />
+            <TableColumn fx:id="colunaPreco" prefWidth="86.0" text="Preço" />
+            <TableColumn fx:id="colunaCategoria" prefWidth="106.0" text="Categoria" />
+            <TableColumn fx:id="colunaQuantidade" prefWidth="112.0" text="Quantidade" />
+            <TableColumn fx:id="colunaTotal" prefWidth="85.0" text="Total" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <ComboBox fx:id="pagBox" layoutX="15.0" layoutY="350.0" prefHeight="25.0" prefWidth="163.0" promptText="Forma de pagamento" AnchorPane.bottomAnchor="58.666666666666686" AnchorPane.leftAnchor="15.0" />
+      <TextField fx:id="inputDinheiro" layoutX="185.0" layoutY="351.0" promptText="Dinheiro" AnchorPane.bottomAnchor="57.666666666666686" />
+      <Button layoutX="15.0" layoutY="381.0" mnemonicParsing="false" onAction="#adicionar" prefHeight="25.0" prefWidth="163.0" text="Adicionar" AnchorPane.bottomAnchor="27.666666666666686" AnchorPane.leftAnchor="15.0" />
+      <Button layoutX="185.0" layoutY="381.0" mnemonicParsing="false" onAction="#confirmarCompra" prefHeight="25.0" prefWidth="149.0" text="Confirmar" AnchorPane.bottomAnchor="28.0" />
+      <Label layoutX="504.0" layoutY="393.0" text="R$" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="123.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="valorFinal" alignment="CENTER" layoutX="531.0" layoutY="381.0" prefHeight="48.0" prefWidth="105.0" promptText="Total" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="21.0" fitWidth="17.0" layoutX="16.0" layoutY="331.3333333333336" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="85.6666666666664">
+         <image>
+            <Image url="@imagens/visa.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="37.0" layoutX="35.0" layoutY="326.3333333333334" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="80.66666666666657">
+         <image>
+            <Image url="@imagens/master.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="28.0" layoutX="62.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="85.0">
+         <image>
+            <Image url="@imagens/american.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="307.0" layoutY="351.66666666666686" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="59.333333333333144">
+         <image>
+            <Image url="@imagens/cash.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.0" fitWidth="12.0" layoutX="15.0" layoutY="409.6666666666667" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="11.333333333333314">
+         <image>
+            <Image url="@imagens/help.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="30.0" layoutY="408.6666666666667" text="Suporte" AnchorPane.bottomAnchor="8.99999999999998">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Button layoutX="340.0" layoutY="380.0" mnemonicParsing="false" onAction="#cancelarCompra" prefHeight="25.0" prefWidth="87.0" text="Cancelar" AnchorPane.bottomAnchor="28.0" />
+      <TextField fx:id="troco" alignment="CENTER" layoutX="531.0" layoutY="330.0" prefHeight="40.0" prefWidth="105.0" promptText="Troco" AnchorPane.bottomAnchor="59.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="504.0" layoutY="337.0" text="R$" AnchorPane.bottomAnchor="66.0" AnchorPane.rightAnchor="123.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

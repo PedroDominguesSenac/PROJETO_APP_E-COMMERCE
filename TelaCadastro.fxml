@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="433.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetointegrador.TelaCadastroClienteController">
+   <children>
+      <Label layoutX="35.0" layoutY="20.0" prefHeight="25.0" prefWidth="179.0" text="Cadastro de Cliente" AnchorPane.leftAnchor="26.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="60.0" text="Nome Completo*" AnchorPane.leftAnchor="26.0" />
+      <TextField fx:id="editNome" layoutX="19.0" layoutY="86.0" prefHeight="7.0" prefWidth="602.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" />
+      <Label layoutX="19.0" layoutY="121.0" text="CPF/CNPJ*" AnchorPane.leftAnchor="26.0" />
+      <TextField fx:id="editCpf" layoutX="19.0" layoutY="142.0" prefHeight="25.0" prefWidth="194.0" AnchorPane.leftAnchor="26.0" />
+      <Label layoutX="229.0" layoutY="120.0" text="Gênero" AnchorPane.leftAnchor="229.0" />
+      <ComboBox fx:id="editGenero" layoutX="229.0" layoutY="142.0" prefHeight="25.0" prefWidth="119.0" AnchorPane.leftAnchor="229.0" AnchorPane.rightAnchor="302.0" />
+      <Label layoutX="353.99999999999994" layoutY="119.0" text="Estado Civil" AnchorPane.rightAnchor="235.33333333333337" />
+      <ComboBox fx:id="editEstadoCivil" layoutX="353.6666666666667" layoutY="142.0" prefHeight="25.0" prefWidth="119.0" AnchorPane.rightAnchor="177.0" />
+      <Label layoutX="479.0" layoutY="118.0" text="Data de Nascimento" AnchorPane.rightAnchor="63.0" />
+      <DatePicker fx:id="editData" layoutX="469.0" layoutY="142.0" prefHeight="25.0" prefWidth="145.0" AnchorPane.rightAnchor="26.0" />
+      <Label layoutX="39.0" layoutY="175.0" text="Telefone*" AnchorPane.leftAnchor="26.0" />
+      <TextField fx:id="editTelefone" layoutX="19.0" layoutY="195.0" prefHeight="25.0" prefWidth="194.0" AnchorPane.leftAnchor="26.0" />
+      <Label layoutX="230.0" layoutY="174.0" text="E-mail*" AnchorPane.leftAnchor="230.0" />
+      <TextField fx:id="editEmail" layoutX="229.0" layoutY="195.0" prefHeight="25.0" prefWidth="395.0" AnchorPane.leftAnchor="229.0" AnchorPane.rightAnchor="26.0" />
+      <Label layoutX="38.0" layoutY="233.0" text="Logadouro" AnchorPane.leftAnchor="26.0" />
+      <TextField fx:id="editLogadouro" layoutX="19.0" layoutY="255.0" prefHeight="25.0" prefWidth="194.0" AnchorPane.leftAnchor="26.0" />
+      <Label layoutX="229.0" layoutY="233.0" text="Número" AnchorPane.leftAnchor="229.0" />
+      <TextField fx:id="editNumero" layoutX="228.0" layoutY="255.0" prefHeight="25.0" prefWidth="76.0" AnchorPane.leftAnchor="228.0" AnchorPane.rightAnchor="346.0" />
+      <Label layoutX="308.0" layoutY="233.0" text="Complemento" AnchorPane.rightAnchor="266.0" />
+      <TextField fx:id="editComplemento" layoutX="367.66666666666663" layoutY="254.0" prefHeight="25.0" prefWidth="314.0" AnchorPane.rightAnchor="26.0" />
+      <Label layoutX="19.0" layoutY="289.0" text="CEP" AnchorPane.leftAnchor="26.0" />
+      <TextField fx:id="editCep" layoutX="19.0" layoutY="309.0" prefHeight="25.0" prefWidth="194.0" AnchorPane.leftAnchor="26.0" />
+      <Label layoutX="229.0" layoutY="289.0" text="Estado" AnchorPane.leftAnchor="229.0" />
+      <ComboBox fx:id="editEstado" layoutX="229.0" layoutY="311.0" prefHeight="25.0" prefWidth="179.0" AnchorPane.leftAnchor="229.00000000000003" AnchorPane.rightAnchor="241.66666666666666" />
+      <Label layoutX="413.0" layoutY="288.0" text="Cidade" AnchorPane.rightAnchor="199.66666666666669" />
+      <TextField fx:id="editCidade" layoutX="412.0" layoutY="309.0" prefHeight="28.0" prefWidth="209.0" AnchorPane.rightAnchor="26.0" />
+      <Button layoutX="568.0" layoutY="374.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="26.0" />
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="26.0" layoutY="407.6666666666667" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0">
+         <image>
+            <Image url="@imagens/help.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="43.0" layoutY="408.6666666666667" text="Suporte" AnchorPane.bottomAnchor="9.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
